@@ -1,0 +1,121 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%; /* #333333 - Dark grey for content */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* New color palette for light mode */
+    --title: 0 100% 36%; /* #B80000 - Bold deep red for headings */
+    --header: 0 100% 97%; /* #FFF3F3 - Soft blush white background */
+    
+    --primary: 6 94% 60%; /* #FF3B3F - Primary button color */
+    --primary-foreground: 0 0% 100%; /* White text on primary buttons */
+
+    --secondary: 0 0% 96%; /* #F5F5F5 - Secondary button */
+    --secondary-foreground: 6 94% 60%; /* Red text on secondary buttons */
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 6 94% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%; /* #E6E6E6 - Light grey for card borders */
+    --input: 0 0% 90%;
+    --ring: 6 94% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 6 94% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 6 94% 60%;
+
+    --brand: 6 94% 60%; /* Main brand color */
+    --brand-foreground: 0 0% 100%;
+    
+    --call-to-action: 13 100% 61%; /* #FF5733 - Lively orange-red for CTAs */
+    --hovering: 9 100% 60%; /* #D62F2F - Slightly darker red for hover states */
+  }
+
+  .dark {
+    --background: 240 5% 10%; /* #1F1F1F - Charcoal black */
+    --foreground: 0 0% 83%; /* #D3D3D3 - Light grey content */
+
+    --card: 240 5% 12%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 83%;
+
+    --popover: 240 5% 10%;
+    --popover-foreground: 0 0% 83%;
+
+    /* New color palette for dark mode */
+    --title: 0 0% 100%; /* #FFFFFF - Crisp white for titles */
+    --header: 240 5% 12%; /* #1F1F1F - Charcoal black for headers */
+    
+    --primary: 0 0% 27%; /* #444444 - Dark grey for primary buttons */
+    --primary-foreground: 0 0% 100%; /* White text on primary buttons */
+
+    --secondary: 0 0% 19%; /* #F2F2F2 - Light grey for secondary buttons */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary buttons */
+
+    --muted: 240 5% 15%; /* Slightly lighter than background */
+    --muted-foreground: 240 5% 83%;
+
+    --accent: 0 0% 40%; /* Medium grey for accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%; /* #333333 - Slightly darker for borders */
+    --input: 0 0% 20%;
+    --ring: 0 0% 83.1%;
+    
+    --sidebar-background: 240 5% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 27%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 83.1%;
+
+    --brand: 358 76% 68%; /* #F4A4AF - Bright red-pink */
+    --brand-foreground: 0 0% 100%;
+    
+    --call-to-action: 0 76% 65%; /* #F4A4AF - Bright red-pink for CTAs */
+    --hovering: 0 40% 40%; /* #666666 - Medium grey for hover effects */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[hsl(var(--title))];
+  }
+}
+
